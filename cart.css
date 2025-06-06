@@ -87,30 +87,41 @@
       transition: opacity 1s ease 0.5s;
     }
 
+    .scroll-container {
+    max-height: 235px;  /* altura máxima visible */
+    overflow-y: auto;   /* barra vertical si es necesario */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 1rem;
+    }
+
+
     .card.open .card-content {
       opacity: 1;
     }
 
     .button-container {
-  position: absolute;
-  top: 700px; /* justo debajo de la carta abierta (300px + espacio) */
-  width: 100%;
-  text-align: center;
-  z-index: 3;
-}
+    position: absolute;
+    top: 700px; /* justo debajo de la carta abierta (300px + espacio) */
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    }
 
-.return-btn {
-  padding: 10px 20px;
-  background-color: #d6336c;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    .return-btn {
+    padding: 10px 20px;
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
-.return-btn:hover {
-  background-color: #b52a5b;
-}
+    .return-btn:hover {
+    background-color: #b52a5b;
+    }
