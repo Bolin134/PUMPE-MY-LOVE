@@ -1,0 +1,116 @@
+    body {
+      background: #ffe6e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+
+    .envelope {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #d6336c;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .heart {
+      width: 40px;
+      height: 40px;
+      background: red;
+      position: relative;
+      transform: rotate(45deg);
+      cursor: pointer;
+      animation: pulse 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -20px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -20px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: rotate(45deg) scale(1); }
+      50% { transform: rotate(45deg) scale(1.1); }
+    }
+
+    .card {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: height 1s ease;
+      z-index: 1; /* Detrás del sobre inicialmente */
+    }
+
+    .card.open {
+      height: 300px;
+      z-index: 3; /* Se eleva al abrir */
+    }
+
+
+    .card-content {
+      opacity: 0;
+      padding: 20px;
+      transition: opacity 1s ease 0.5s;
+    }
+
+    .card.open .card-content {
+      opacity: 1;
+    }
+
+    .button-container {
+  position: absolute;
+  top: 700px; /* justo debajo de la carta abierta (300px + espacio) */
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.return-btn {
+  padding: 10px 20px;
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.return-btn:hover {
+  background-color: #b52a5b;
+}
