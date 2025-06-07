@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="cart.css" />
 </head>
 <body>
-  <audio id="bg-music" src="Ed Maverick - Ropa De Bazar.mp3" loop></audio>
+
+  <!-- Audio oculto con autoplay y loop -->
+  <audio id="bg-music" src="Ed Maverick - Ropa De Bazar.mp3" autoplay loop playsinline></audio>
 
   <div class="container">
     <div class="envelope" id="envelope">
@@ -36,10 +38,19 @@
     <button class="return-btn" onclick="window.location.href='index.html'">Regresar al inicio</button>
   </div>
 
-
   <script src="cartjs.js"></script>
-  
-  <audio id="bg-music" src="Ed Maverick - Ropa De Bazar.mp3" loop></audio>
-</body>
 
+  <!-- Script para iniciar la música al hacer clic en la pantalla (para móviles) -->
+  <script>
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.play().catch(err => {
+          console.log("No se pudo reproducir automáticamente:", err);
+        });
+      }
+    }, { once: true });
+  </script>
+
+</body>
 </html>
