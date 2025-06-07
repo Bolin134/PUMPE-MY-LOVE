@@ -40,6 +40,17 @@
     <button class="return-btn" onclick="window.location.href='index.html'">Regresar al inicio</button>
   </div>
 
+  <script>
+  // Escucha el primer toque/clic del usuario
+  document.addEventListener('click', function () {
+    const audio = document.getElementById('bg-music');
+    if (audio.paused) {
+      audio.play().catch((err) => {
+        console.log("Error al reproducir:", err);
+      });
+    }
+  }, { once: true }); // Solo se activa una vez
+</script>
 
   <script src="cartjs.js"></script>
 
