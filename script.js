@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
               cursor: pointer;
               font-size: 1rem;
               ">
-                Ir a la siguiente página
+                Ver Carta 💌
               </button>
             `;
           return;
