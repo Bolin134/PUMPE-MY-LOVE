@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carta Animada</title>
   <link rel="stylesheet" href="cart.css" />
+
+  <audio class="song" controls>
+    <source src="Ed Maverick - Ropa De Bazar.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
 </head>
 <body>
-  <audio id="bg-music" src="Ed Maverick - Ropa De Bazar.mp3" loop></audio>
 
   <div class="container">
     <div class="envelope" id="envelope">
@@ -24,7 +28,7 @@
           paso tan apido que ya nos vamos a ver y se nos hacía larga la espera de ser <strong>1</strong> año, empezó a disminuir a 
           <strong>6</strong> meses y ya estamos a nada de vernos asi que <i>disfruta</i> espero que te agrade este dia mi vida, y <i>este pequeño 
           detallito</i>, te daré tu abrazo cuando te vea, <strong>me encantas muchísimo <i>nunca</i> lo olvides</strong>, eres mi 
-          <strong>pilarcito</strong> así que vamos por todo amor, <strong>FELIZ CUMPLEAÑOS MI VIDA</strong>.</p>
+          <strong>pilarcito</strong> así que vamos por todo amor, <strong>FELIZ CUMPLEAÑOS MI VIDA, TE MERECES TODO LO MEJOR DEL MUNDO MUUUUAAAAAAKKKK 😘</strong>.</p>
           <p>Con amor y cariño de: </p>
           <p><strong>Tu novio KIKIN ❤️</strong></p>
         </div>
@@ -38,30 +42,7 @@
 
 
   <script src="cartjs.js"></script>
-  
-  <script>
-  function esCelular() {
-    return /iPhone|Android|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
-  }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const audio = document.getElementById('bg-music');
-
-      if (esCelular()) {
-        // Requiere interacción para reproducir en móvil
-        document.addEventListener('click', function () {
-          if (audio.paused) {
-            audio.play().catch(() => {});
-          }
-        }, { once: true });
-      } else {
-        // En computadora intenta reproducir directo
-        audio.play().catch(() => {});
-      }
-    });
-  </script>
-  
-  <audio id="bg-music" src="Ed Maverick - Ropa De Bazar.mp3" loop></audio>
 </body>
 
 </html>
