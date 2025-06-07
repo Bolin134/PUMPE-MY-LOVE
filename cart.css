@@ -1,4 +1,4 @@
-    body {
+        body {
       background: #ffe6e6;
       display: flex;
       align-items: center;
@@ -105,6 +105,14 @@
     .button-container {
     position: absolute;
     top: 700px; /* justo debajo de la carta abierta (300px + espacio) */
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    }
+
+    .song {
+    position: absolute;
+    top: 800px; /* justo debajo de la carta abierta (300px + espacio) */
     width: 100%;
     text-align: center;
     z-index: 3;
